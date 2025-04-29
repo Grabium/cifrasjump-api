@@ -1,2 +1,2 @@
 <?php
-echo 'Cifras Jump is in the air'.PHP_EOL;
+echo 'Aplicação iniciada!'.PHP_EOL;
