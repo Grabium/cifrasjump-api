@@ -3,8 +3,9 @@ namespace CJump;
 
 class App
 {
-    public function __construct()
+    public function start(): void
     {
-        echo __CLASS__.' Foi acessada - ';
+        $r = new Http\Request($_REQUEST);
+        var_dump($r->all());
     }
 }
