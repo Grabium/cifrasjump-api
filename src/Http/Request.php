@@ -5,7 +5,6 @@ class Request
 {
     protected array $data = [];
 
-    //new Request($_REQUEST);
     public function __construct(array $data = [])
     {
         $this->data = $data;
@@ -41,18 +40,10 @@ class Request
         return $filteredData;
     }
 
-    // Método para adicionar ou atualizar dados na requisição
+    //adiciona ou atualiza dados na requisição.
     public function merge(array $newData): void
     {
         $this->data = array_merge($this->data, $newData);
     }
 
-    // Outros métodos úteis para interagir com a requisição podem ser adicionados aqui,
-    // como obter headers, arquivos, etc.
-
-    //Permite que a classe Validation acesse os dados da requisição
-    public function getDataForValidation(): array
-    {
-        return $this->data;
-    }
 }

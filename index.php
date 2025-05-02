@@ -1,8 +1,14 @@
 <?php
-echo "Buscando o autoload - ";
 
+//Chamada do framework.
 require_once 'src/autoload.php';
 require_once 'vendor/autoload.php';
 
-(new CJump\App)->start();
+require 'src/Routes/api.php';
+
+//Chamada de testes.
 //(new test\Test)->testar();
+
+
+//Chamada da aplicação.
+(new CJump\App)->start();

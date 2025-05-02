@@ -5,6 +5,6 @@ class Test
 {
     public function testar()
     {
-        echo 'Tudo ok no Test.php - ';
+        echo 'Tudo ok no '.__CLASS__.PHP_EOL;
     }
 }
