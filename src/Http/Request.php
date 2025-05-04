@@ -3,11 +3,11 @@ namespace CJump\Http;
 
 class Request
 {
-    protected array $data = [];
+    public array $data = [];
 
-    public function __construct(array $data = [])
+    public function __construct()
     {
-        $this->data = $data;
+        $this->data = $_REQUEST;
     }
 
     public function get(string $key)
@@ -38,12 +38,6 @@ class Request
             unset($filteredData[$key]);
         }
         return $filteredData;
-    }
-
-    //adiciona ou atualiza dados na requisição.
-    public function merge(array $newData): void
-    {
-        $this->data = array_merge($this->data, $newData);
     }
 
 }
