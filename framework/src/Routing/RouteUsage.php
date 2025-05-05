@@ -1,7 +1,7 @@
 <?php
-namespace CJump\Routes;
+namespace Frmk\Routing;
 
-class RouteUsage extends Routes
+class RouteUsage extends Routing
 {
     private static function getHTTPPath(): string
     {

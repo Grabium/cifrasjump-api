@@ -1,5 +1,5 @@
 <?php
-namespace CJump\Http;
+namespace Frmk\Http\Request;
 
 class Request
 {

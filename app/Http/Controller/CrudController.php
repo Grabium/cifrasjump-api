@@ -1,7 +1,7 @@
 <?php
 namespace CJump\Http\Controller;
 
-use \CJump\Http\Request;
+use Frmk\Http\Request\Request;
 
 class CrudController extends Controller
 {

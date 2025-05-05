@@ -1,7 +1,7 @@
 <?php
 
-require_once 'src/autoload.php';
 require_once 'vendor/autoload.php';
-require_once 'routes_sign/api.php';//inscreve rotas
+require_once 'autoload.php';
+require_once 'app/routes/api.php';
 
-(new CJump\App)->start();
+(new Frmk\Loader)->start();

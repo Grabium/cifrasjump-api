@@ -1,7 +1,7 @@
 <?php
-namespace CJump\Routes;
+namespace Frmk\Routing;
 
-class Routes
+class Routing
 {
     protected static array $routes = [];
 

@@ -1,9 +1,9 @@
 <?php
-namespace CJump;
+namespace Frmk;
 
-use CJump\Routes\Route;
+use Frmk\Routing\Route;
 
-class App
+class Loader
 {
     public function start(): void
     {

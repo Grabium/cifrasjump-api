@@ -1,6 +1,6 @@
 <?php
-namespace CJump\Routes;
 
+use Frmk\Routing\Route;
 use CJump\Http\Controller\CrudController;
 
 // Definindo um handler como uma função anônima

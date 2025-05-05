@@ -1,10 +1,7 @@
 <?php
-namespace CJump\Routes;
+namespace Frmk\Routing;
 
-use CJump\Http\Controller\Controller;
-use CJump\Http\Request;
-
-class Route extends Routes
+class Route extends Routing
 {
     public final static function get(string $name, string $path, callable|array $handler): void
     {
