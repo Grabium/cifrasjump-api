@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Recursos;
 
 use App\Http\Controllers\Controller;
-//use Illuminate\Http\Request;
 
 class TextoController extends Controller
 {
@@ -12,4 +11,9 @@ class TextoController extends Controller
     public  array $linhas;
     public  array $protots;
     public  array $cifras;
+
+    public function __construct(string $texto)
+    {
+        $this->textoOriginal = $texto;
+    }
 }

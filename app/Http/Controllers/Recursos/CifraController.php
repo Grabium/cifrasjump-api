@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Recursos;
 
 use App\Http\Controllers\Controller;
-//use Illuminate\Http\Request;
+use App\Http\Controllers\Recursos\Protot\PrototProxyController;
 
 class CifraController extends Controller
 {
@@ -17,7 +17,7 @@ class CifraController extends Controller
     public null|string $invercao        = null;
 
     //auxiliares
-    public PrototController $protot;
+    public PrototProxyController $protots;
     public              int $tamanhoFinal;
     public              int $inversaoIndexFinal;
     
