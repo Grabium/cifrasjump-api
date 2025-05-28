@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Acorde;
+namespace App\Entidade\Acorde\Composite;
 
 abstract class Intervalo
 {

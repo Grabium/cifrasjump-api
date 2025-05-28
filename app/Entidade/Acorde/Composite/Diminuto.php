@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Services\Acorde;
+namespace App\Entidade\Acorde\Composite;
 
-class Inversao
+class Diminuto
 {
     public string $sinal;
-    public int    $local;
-
 
     /**
    * 
@@ -17,7 +15,6 @@ class Inversao
     {
         $this->validate($key);
         $this->sinal = $key['sinal'];
-        $this->local = $key['local'];
     }
   
    /**
@@ -27,10 +24,10 @@ class Inversao
    *******/
     public function validate(mixed $key)
     {
-        $regex = '^[ABCDEFG][#b]?';
+        $regex = '^(dim|°)';
 
         if(!preg_match('/'.$regex.'/', $key['sinal']) && $key != 'NaoTestado'){
-            throw new \TypeError('Tonalidade da inversão inválida: '.$key['sinal'].'.');
+            throw new \TypeError('Sinal de Diminuto inválido: '.$key['sinal'].'.');
         }
     }
 }

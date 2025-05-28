@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Acorde;
+namespace App\Entidade\Acorde\Composite;
 
-class IntervaloComposto extends Intervalo
+class IntervaloSimples extends Intervalo
 {
     /**
    * 
@@ -11,10 +11,10 @@ class IntervaloComposto extends Intervalo
    *******/
     public function validate(mixed $key)
     {
-        $regex = '[#b]?(1[0123467]|9)';
+        $regex = '[#b]?[234567]';
 
         if(!preg_match('/'.$regex.'/', $key) && $key != 'NaoTestado'){
-            throw new \TypeError('Intervalo composto inválido: '.$key.'.');
+            throw new \TypeError('Intervalo simples inválido: '.$key.'.');
         }
     }
 }

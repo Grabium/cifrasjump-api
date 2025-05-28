@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Services\Acorde;
+namespace App\Entidade\Acorde\Composite;
 
-class Quinta
+class Terca implements AcordeComposicaoInterface
 {
-    
     public string $sinal;
 
     /**
@@ -25,10 +24,9 @@ class Quinta
      *******/  
     public function validate(mixed $key)
     {
-        $regex = '(diminuta|justa|aumentada|NaoTestado)';
+        $regex = '(menor|maior|suspenso|NaoTestado)';
         if(!preg_match('/'.$regex.'/', $key)){
-            throw new \TypeError('Quinta aceita apenas [diminuta|justa|aumentada|NaoTestado] como valor.');
+            throw new \TypeError('Terca aceita apenas [menor|maior|suspenso|NaoTestado] como valor.');
         }
     }
-    
 }

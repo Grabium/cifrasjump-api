@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Services\Acorde;
+namespace App\Entidade\Acorde\Composite;
 
-class Enarmonia implements AcordeComposicaoInterface
+class Tom
 {
     public string $sinal;
-
 
     /**
    * 
@@ -25,8 +24,13 @@ class Enarmonia implements AcordeComposicaoInterface
    *******/
     public function validate(mixed $key)
     {
-        if($key !== '#' && $key !== 'b' && $key != 'NaoTestado'){
-            throw new \TypeError('Enarmonia apenas aceita [#] ou [b] como valor.');
+        $regex = '^[ABCDEFG][#b]?';
+
+        if(!preg_match('/'.$regex.'/', $key, $tom) && $key != 'NaoTestado'){
+            throw new \TypeError('Tonalidade inválida para o acorde: '.$key.'.');
         }
+        var_dump($tom[0]);
+
+        //$this->sinal = $tom[0];
     }
 }
