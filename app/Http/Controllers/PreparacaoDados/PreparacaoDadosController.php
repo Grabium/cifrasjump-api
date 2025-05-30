@@ -4,7 +4,7 @@ namespace App\Http\Controllers\PreparacaoDados;
 
 
 use App\Http\Controllers\Controller;
-use App\Entidade\Acorde\Cifra\CifraProxy;
+use App\Entidade\Acorde\Cifra\CifrasQueue;
 
 class PreparacaoDadosController extends Controller
 {
@@ -18,7 +18,7 @@ class PreparacaoDadosController extends Controller
     public function preparar(string $text)
     {
         $matches = $this->getMatches($text);
-        CifraProxy::setCifras($matches);
-        dd(CifraProxy::getCifras());
+        CifrasQueue::setCifras($matches);
+        dd(CifrasQueue::getCifras());
     }    
 }

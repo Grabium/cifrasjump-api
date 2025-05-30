@@ -2,7 +2,7 @@
 
 namespace App\Entidade\Acorde\Cifra;
 
-class CifraProxy
+class CifrasQueue
 {
     static public array $cifras;
 
