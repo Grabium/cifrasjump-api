@@ -7,7 +7,7 @@ use App\Entidade\Acorde\Composite\Terca;
 use App\Entidade\Acorde\Composite\Intervalo;
 use App\Entidade\Acorde\Cifra\Cifra;
 
-class AcordeController
+class Acorde
 {
     
     public     Cifra $cifraOriginal;

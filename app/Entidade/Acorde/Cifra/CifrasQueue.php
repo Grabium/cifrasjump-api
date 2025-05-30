@@ -2,19 +2,22 @@
 
 namespace App\Entidade\Acorde\Cifra;
 
+use App\Entidade\Acorde\Acorde;
+
 class CifrasQueue
 {
-    static public array $cifras;
+    static public array $acordes;
 
-    static public function setCifras(array $matches)
+    static public function setAcordes(array $matches)
     {
         foreach($matches as $match){
-            self::$cifras[$match[1]] = new Cifra($match[0]);
+            $cifra = new Cifra($match[0]);
+            self::$acordes[$match[1]] = new Acorde($cifra);
         }
     }
 
-    static public function getCifras(): array
+    static public function getAcordes(): array
     {
-        return self::$cifras;
+        return self::$acordes;
     }
 }

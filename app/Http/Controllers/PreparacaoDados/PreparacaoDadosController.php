@@ -18,7 +18,7 @@ class PreparacaoDadosController extends Controller
     public function preparar(string $text)
     {
         $matches = $this->getMatches($text);
-        CifrasQueue::setCifras($matches);
-        dd(CifrasQueue::getCifras());
+        CifrasQueue::setAcordes($matches);
+        var_dump(CifrasQueue::getAcordes());
     }    
 }
